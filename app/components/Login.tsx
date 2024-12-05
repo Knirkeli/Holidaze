@@ -74,11 +74,9 @@ const LoginForm = () => {
 
         // Set the access token and user cookies
         setAccessToken(data.accessToken);
-        console.log(data); // log the user object
-        setUser(data); // This will now include the venueManager property
+        setUser(data);
 
         const apiKey = await createApiKey(data.accessToken);
-        console.log(`API Key: ${apiKey}`);
 
         // Set the API key cookie
         setApiKeyCookie(apiKey);

@@ -31,7 +31,6 @@ function Edit() {
 
   const fetchVenue = async () => {
     const response = await apiRequest(`${API_VENUES}/${id}`);
-    console.log("API response:", response);
     const data = response.data; // Access the 'data' field of the response
     setVenue(data);
     setName(data.name);
@@ -73,28 +72,7 @@ function Edit() {
     }
   }, [id]);
 
-  useEffect(() => {
-    console.log("State variables:", {
-      venue,
-      name,
-      description,
-      imageUrl,
-      price,
-      maxGuests,
-      rating,
-      wifi,
-      parking,
-      breakfast,
-      pets,
-      address,
-      city,
-      zip,
-      country,
-      continent,
-      lat,
-      lng,
-    });
-  }, [
+  useEffect(() => {}, [
     venue,
     name,
     description,

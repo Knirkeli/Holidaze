@@ -56,12 +56,11 @@ export function useVenueData(id: string) {
     if (data.data.media.length > 0) {
       // Add the id property to the venueData object
       const venueData: VenueData = {
-        id: id, // Add this line
+        id: id, 
         ...data.data,
       };
   
       setVenueData(venueData); // Update the state with the new venueData object
-      console.log(venueData); // Log the fetched data
   
       const disabledDates = data.data.bookings
         .map((booking: { dateFrom: string | number | Date; dateTo: string | number | Date; }) =>
@@ -76,7 +75,7 @@ export function useVenueData(id: string) {
     }
   
     setIsLoading(false);
-  } // Add this line
+  }
   
   useEffect(() => {
     if (id) {

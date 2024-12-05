@@ -1,4 +1,3 @@
-// useManagerData.ts
 import { useEffect, useState } from "react";
 import { apiRequest, API_PROFILES, API_VENUES } from "../../shared/apis";
 import Cookies from "js-cookie";

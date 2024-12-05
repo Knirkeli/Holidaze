@@ -1,10 +1,7 @@
-import React, { useState, useEffect, FC } from "react";
+import React, { FC } from "react";
 import { useRouter } from "next/router";
-import { API_VENUES, API_BOOKINGS } from "../../shared/apis";
-import { Button } from "@/components/ui/button";
 import Navbar from "../../app/components/Navbar";
 import Footer from "../../app/components/Footer";
-import { getAccessToken, getApiKey } from "../../shared/cookies";
 import {
   Carousel,
   CarouselContent,
@@ -12,11 +9,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import { Calendar } from "../../components/ui/calendar";
 import "../../app/globals.css";
 import WeatherIcon from "@/components/ui/weather";
 import { useVenueData } from "../../app/useFetch/useFetchId";
-import { useBooking } from "../../app/hooks/useBooking";
 import BookingCalendar from "../../app/components/BookingCalendar";
 import VenueDetails from "../../app/components/VenueDetails";
 

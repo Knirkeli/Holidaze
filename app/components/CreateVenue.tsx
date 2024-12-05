@@ -46,16 +46,12 @@ const Create: FunctionComponent<CreateProps> = ({ closeModal }) => {
         zip,
         country,
         continent,
-        lat: 1, // Set default latitude
-        lng: 1, // Set default longitude
+        lat: 1,
+        lng: 1,
       },
     };
 
-    console.log(venue); // Log the request body
-
     const response = await apiRequest(API_VENUES, "POST", venue);
-
-    console.log(response); // Log the response
 
     if (response.data) {
       closeModal();

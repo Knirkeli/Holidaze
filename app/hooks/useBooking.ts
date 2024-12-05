@@ -11,7 +11,7 @@ export interface VenueData {
   rating: ReactNode;
   price: ReactNode;
   description: ReactNode;
-  maxGuests: any; // Replace any with the actual type of maxGuests
+  maxGuests: any;
   bookings: {
     dateFrom: string;
     dateTo: string;
@@ -60,7 +60,6 @@ export function useBooking(venueData: { maxGuests: any; }, id: string | string[]
     }
   
     const data = await response.json();
-    console.log(data);
     window.alert("Booking successful!");
   };
 

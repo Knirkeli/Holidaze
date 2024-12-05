@@ -19,7 +19,7 @@ interface Venue {
   name: string;
   price: number;
   media: Media[];
-  created: string; // Assuming your venue objects have a 'created' property
+  created: string;
 }
 
 const VenueCard: React.FC<{ venue: Venue }> = ({ venue }) => {
@@ -95,8 +95,6 @@ export default function Venues({}) {
         </div>
         {displayCount < filteredVenues.length && (
           <div className="text-center my-4">
-            {" "}
-            {/* Add text-center to this div */}
             <Button
               variant="outline"
               onClick={() => setDisplayCount(displayCount + 50)}
